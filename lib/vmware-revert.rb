@@ -7,6 +7,6 @@ module VMWareRevert
       root = vim.serviceInstance.content.rootFolder
       dc = root.childEntity[0]
       vm = dc.find_vm(vmName)
-      vm.RevertToCurrentSnapshot_Task.wait_to_completion
+      vm.RevertToCurrentSnapshot_Task.wait_for_completion
    end
 end
