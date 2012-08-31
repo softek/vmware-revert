@@ -8,5 +8,6 @@ module VMWareRevert
       dc = root.childEntity[0]
       vm = dc.find_vm(vmName)
       vm.RevertToCurrentSnapshot_Task.wait_for_completion
+      vm.PowerOnVM_Task.wait_for_completion
    end
 end
